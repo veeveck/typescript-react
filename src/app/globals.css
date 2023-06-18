@@ -1,27 +1,121 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*{
+  margin: 0;
+}
+.postList{
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 50px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.postCard{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.eventHandle {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.eventHandle form:first-child {
+  display: flex !important;
+  gap: 20px;
+}
+
+.eventHandle form:first-child input {
+  padding: 10px;
+  width: 400px;
+}
+
+.eventHandle form:first-child button {
+  width: 70px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: teal;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.eventHandle form:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.eventHandle form:nth-child(2) button {
+  width: max-content;
+  padding: 5px;
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.66);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.eventHandle form:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.eventHandle form:nth-child(3) button {
+  width: max-content;
+  padding: 5px;
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.66);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.useStateExample {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: calc(100vh - 70px);
+}
+
+.useStateExample form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.useStateExample input {
+  padding: 10px;
+}
+.useStateExample button {
+  padding: 10px;
+  cursor: pointer;
+  background-color: teal;
+  color: white;
+  border: none;
+}
+.context {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 70px);
+}
+
+.context button {
+  width: 200px;
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  color: white;
+}
+.context button:first-child {
+  background-color: teal;
+}
+.context button:last-child {
+  background-color: rebeccapurple
 }
